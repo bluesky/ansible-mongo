@@ -1,4 +1,8 @@
 ---
-- hosts: all
+- hosts: mongo
   roles:
-  -  role: standalone
+  - role: standalone
+
+- hosts: configserver
+  roles:
+  - role: configserver

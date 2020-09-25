@@ -1,0 +1,4 @@
+---
+- hosts: configserver_leader
+  roles:
+  -  role: configserver

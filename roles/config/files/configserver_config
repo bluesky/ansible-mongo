@@ -1,6 +1,0 @@
-sharding:
-  clusterRole: configsvr
-replication:
-  replSetName: configserver
-net:
-  bindIpAll: true
