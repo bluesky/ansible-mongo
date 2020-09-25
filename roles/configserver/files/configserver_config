@@ -1,0 +1,6 @@
+net:
+  bindIpAll: yes
+replication:
+  replSetName: config_repl_set
+sharding:
+  clusterRole: configsvr
