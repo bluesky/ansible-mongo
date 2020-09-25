@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
       sudo echo "192.168.64.33 mongo3" | sudo tee -a /etc/hosts
     SHELL
     mongo1.vm.provision "ansible" do |ansible|
-      ansible.playbook = "site.yml"
+      ansible.playbook = "playbook_cluster.yml"
       ansible.extra_vars = {
 
       }
@@ -36,7 +36,7 @@ Vagrant.configure("2") do |config|
       sudo echo "192.168.64.33 mongo3" | sudo tee -a /etc/hosts
     SHELL
     mongo2.vm.provision "ansible" do |ansible|
-      ansible.playbook = "site.yml"
+      ansible.playbook = "playbook_cluster.yml"
       ansible.extra_vars = {
 
       }
@@ -56,7 +56,7 @@ Vagrant.configure("2") do |config|
       sudo echo "192.168.64.22 mongo2" | sudo tee -a /etc/hosts
     SHELL
     mongo3.vm.provision "ansible" do |ansible|
-      ansible.playbook = "site.yml"
+      ansible.playbook = "playbook_cluster.yml"
       ansible.extra_vars = {
 
       }
