@@ -15,4 +15,5 @@
   service:
     name: mongod
     state: started
+    enabled: yes
   become: yes
