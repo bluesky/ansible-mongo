@@ -25,10 +25,16 @@
     state: present
   become: yes
 
-- name: Install pymongo
-  command: python3 -m pip install pymongo
-  become_user: root
-  become: yes
+#- name: Install pymongo
+#  command: python3 -m pip install pymongo
+#  become: yes
+
+#- name: Install pymongo
+#  pip:
+#    name: pymongo
+#    state: present
+#    executable: pip3
+#  become: yes
 
 - name: Start service mongod, if not started
   service:
