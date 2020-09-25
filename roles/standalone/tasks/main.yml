@@ -5,11 +5,18 @@
   become: yes
 
 - name: Install the mongodb package
-  yum: 
+  yum:
     name:
       - mongodb-org
+      - python3
+      - pip3
     state: present
   become: yes
+
+- name: Install pymongo
+  pip:
+    name: pymongo
+    executable: pip3
 
 - name: Start service httpd, if not started
   service:
